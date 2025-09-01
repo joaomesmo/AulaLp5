@@ -22,8 +22,8 @@ public class JDlgUsuarios extends javax.swing.JDialog {
         setTitle("Usuarios");
         setLocationRelativeTo(null);
            Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtApelido,  jPswSenha, jFmtCPF, jFmtDatanasc,
-               jCboNivel,  jChbAtivo, jBtnAlterar,  jBtnExcluir, jBtnConfirmar,jBtnCancelar);
-        Util.habilitar(true,jBtnIncluir,  jBtnPesquisar);
+               jCboNivel,  jChbAtivo,  jBtnExcluir, jBtnConfirmar,jBtnCancelar);
+        Util.habilitar(true,jBtnIncluir, jBtnAlterar,  jBtnPesquisar);
     }
 
     /**
@@ -219,36 +219,36 @@ public class JDlgUsuarios extends javax.swing.JDialog {
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         // TODO add your handling code here:
         Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtApelido, jFmtCPF, jFmtDatanasc,
-               jPswSenha, jCboNivel,  jChbAtivo, jBtnCancelar, jBtnConfirmar, jBtnIncluir);
-        Util.habilitar(true, jBtnExcluir, jBtnAlterar, jBtnPesquisar);
+               jPswSenha, jCboNivel,  jChbAtivo, jBtnIncluir,jBtnExcluir, jBtnAlterar);
+        Util.habilitar(true, jBtnConfirmar,jBtnCancelar, jBtnPesquisar);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
         // TODO add your handling code here:
-        Util.habilitar(false, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar );
-        Util.habilitar(true,jTxtCodigo, jTxtNome, jTxtApelido, jPswSenha, jFmtCPF, jFmtDatanasc,
-               jCboNivel, jChbAtivo, jBtnCancelar, jBtnConfirmar);
+        Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtApelido, jFmtCPF, jFmtDatanasc,
+               jPswSenha, jCboNivel,  jChbAtivo, jBtnIncluir, jBtnAlterar);
+        Util.habilitar(true,jBtnExcluir, jBtnConfirmar,jBtnCancelar, jBtnPesquisar);
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
         // TODO add your handling code here:
         Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtApelido,  jPswSenha, jFmtCPF, jFmtDatanasc,
-                jCboNivel,  jChbAtivo, jBtnCancelar, jBtnConfirmar, jBtnIncluir, jBtnExcluir);
-        Util.habilitar(true, jBtnAlterar, jBtnPesquisar);
+               jCboNivel,  jChbAtivo, jBtnExcluir, jBtnConfirmar,jBtnCancelar);
+        Util.habilitar(true,jBtnIncluir,jBtnAlterar,  jBtnPesquisar);
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
         // TODO add your handling code here:
-        Util.habilitar(false, jBtnConfirmar, jBtnExcluir, jBtnPesquisar);
-        Util.habilitar(true,jTxtCodigo, jTxtNome, jTxtApelido,  jPswSenha, jFmtCPF, jFmtDatanasc,
-                jCboNivel,  jChbAtivo, jBtnIncluir, jBtnAlterar, jBtnCancelar);
+        Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtApelido,  jPswSenha, jFmtCPF, jFmtDatanasc,
+               jCboNivel,  jChbAtivo, jBtnExcluir, jBtnConfirmar,jBtnCancelar);
+        Util.habilitar(true,jBtnIncluir,jBtnAlterar,  jBtnPesquisar);
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         // TODO add your handling code here:
         Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtApelido,  jPswSenha, jFmtCPF, jFmtDatanasc,
-                jCboNivel,  jChbAtivo, jBtnCancelar, jBtnConfirmar, jBtnIncluir, jBtnExcluir);
-        Util.habilitar(true, jBtnAlterar, jBtnPesquisar);
+               jCboNivel,  jChbAtivo, jBtnExcluir, jBtnConfirmar,jBtnCancelar);
+        Util.habilitar(true,jBtnIncluir,jBtnAlterar,  jBtnPesquisar);
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
