@@ -218,9 +218,9 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         // TODO add your handling code here:
-        Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtApelido, jFmtCPF, jFmtDatanasc,
-               jPswSenha, jCboNivel,  jChbAtivo, jBtnIncluir,jBtnExcluir, jBtnAlterar);
-        Util.habilitar(true, jBtnConfirmar,jBtnCancelar, jBtnPesquisar);
+        Util.habilitar(true, jTxtCodigo, jTxtNome, jTxtApelido, jFmtCPF, jFmtDatanasc,
+               jPswSenha, jCboNivel,  jChbAtivo, jBtnConfirmar,jBtnCancelar, jBtnPesquisar);
+        Util.habilitar(false,jBtnAlterar,jBtnIncluir,jBtnExcluir);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
@@ -235,6 +235,8 @@ public class JDlgUsuarios extends javax.swing.JDialog {
         Util.habilitar(false, jTxtCodigo, jTxtNome, jTxtApelido,  jPswSenha, jFmtCPF, jFmtDatanasc,
                jCboNivel,  jChbAtivo, jBtnExcluir, jBtnConfirmar,jBtnCancelar);
         Util.habilitar(true,jBtnIncluir,jBtnAlterar,  jBtnPesquisar);
+        Util.limpar(jTxtCodigo, jTxtNome, jTxtApelido, jCboNivel);
+        Util.perguntar("excluir?");
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
@@ -253,6 +255,7 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
         // TODO add your handling code here:
+        Util.mensagem("num tem");
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     /**
