@@ -31,9 +31,15 @@ public class Util {
     public static void mensagem(String cad){
         JOptionPane.showMessageDialog(null, cad);
     }
+    
     public static boolean perguntar (String cad){
-        JOptionPane.showConfirmDialog(null, cad);
-        return true;
+        int resp = JOptionPane.showConfirmDialog(null, cad,
+                "Perguntar", JOptionPane.YES_NO_OPTION);
+        return resp == JOptionPane.YES_OPTION;
+//        if (resp == JOptionPane.YES_OPTION) {
+//            return true;
+//        } else {
+//           return false; }           
     }
     
     public static int strToInt(String num){
@@ -56,7 +62,7 @@ public class Util {
         return null;
     }
     
-    public static String datetoStr(Date data){
+    public static String dateToStr(Date data){
         return "";
     }
 }
