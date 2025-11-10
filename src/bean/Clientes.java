@@ -153,6 +153,17 @@ public class Clientes  implements java.io.Serializable {
     public void setSexo(int sexo) {
         this.sexo = sexo;
     }
+    
+    @Override
+    public String toString(){
+        return this.getNome();
+    }
+    @Override
+    public boolean equals(Object object){
+        if (object instanceof Clientes) {
+            if (this.getIdclientes() == ((Clientes)object).getIdclientes())
+            return true;
+        }
+    return false;
+ }
 }
-
-

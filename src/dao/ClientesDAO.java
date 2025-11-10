@@ -12,42 +12,40 @@ import org.hibernate.criterion.Restrictions;
 
 /**
  *
- * @author u07881654104
+ * @author u07880060103
  */
-public class ClientesDAO extends AbstractDAO {
+public class ClientesDAO extends AbstractDAO{
 
     @Override
     public void insert(Object object) {
-        session.beginTransaction();
-        session.flush();
-        session.clear();
-        session.save(object);
-        session.getTransaction().commit();
+       session.beginTransaction();
+       session.save(object);
+       session.getTransaction().commit();
     }
 
     @Override
     public void update(Object object) {
-        session.beginTransaction();
-        session.flush();
-        session.clear();
-        session.update(object);
-        session.getTransaction().commit();
+       session.beginTransaction();
+       session.flush();
+       session.clear();
+       session.save(object);
+       session.getTransaction().commit();
     }
 
     @Override
     public void delete(Object object) {
-        session.beginTransaction();
-        session.flush();
-        session.clear();
-        session.delete(object);
-        session.getTransaction().commit();
+       session.beginTransaction();
+       session.flush();
+       session.clear();
+       session.save(object);
+       session.getTransaction().commit();
     }
 
     @Override
     public Object list(int codigo) {
         session.beginTransaction();
         Criteria criteria = session.createCriteria(Clientes.class);
-        criteria.add(Restrictions.eq("idusuarios", codigo));
+        criteria.add(Restrictions.eq("idclientes", codigo));
         List lista = criteria.list();
         session.getTransaction().commit();
         return lista;
@@ -61,8 +59,5 @@ public class ClientesDAO extends AbstractDAO {
         session.getTransaction().commit();
         return lista;
     }
-    public static void main (String[] args){
-        UsuariosDAO usuariosDAO = new UsuariosDAO();
-        usuariosDAO.listAll();
-    }
+    
 }

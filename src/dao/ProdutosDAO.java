@@ -6,21 +6,20 @@
 package dao;
 
 import bean.Produtos;
+import bean.Usuarios;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 
 /**
  *
- * @author u07881654104
+ * @author u1845853
  */
 public class ProdutosDAO extends AbstractDAO {
 
     @Override
     public void insert(Object object) {
         session.beginTransaction();
-        session.flush();
-        session.clear();
         session.save(object);
         session.getTransaction().commit();
     }
@@ -47,7 +46,7 @@ public class ProdutosDAO extends AbstractDAO {
     public Object list(int codigo) {
         session.beginTransaction();
         Criteria criteria = session.createCriteria(Produtos.class);
-        criteria.add(Restrictions.eq("idusuarios", codigo));
+        criteria.add(Restrictions.eq("idprodutos", codigo) );
         List lista = criteria.list();
         session.getTransaction().commit();
         return lista;
@@ -61,8 +60,9 @@ public class ProdutosDAO extends AbstractDAO {
         session.getTransaction().commit();
         return lista;
     }
-    public static void main (String[] args){
-        UsuariosDAO usuariosDAO = new UsuariosDAO();
+
+    public static void main(String[] args) {
+        ProdutosDAO usuariosDAO = new ProdutosDAO();
         usuariosDAO.listAll();
     }
 }
